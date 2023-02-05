@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/popularsFragment">
+
+    <fragment
+        android:id="@+id/favouritesFragment"
+        android:name="com.seoleo.fintechlab2023.ui.screens.favourites.FavouritesFragment"
+        android:label="fragment_favourites"
+        tools:layout="@layout/fragment_favourites" />
+
+    <fragment
+        android:id="@+id/popularsFragment"
+        android:name="com.seoleo.fintechlab2023.ui.screens.populars.PopularsFragment"
+        android:label="fragment_populars"
+        tools:layout="@layout/fragment_populars" />
+
+</navigation>

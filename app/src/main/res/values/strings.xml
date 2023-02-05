@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">FintechLab2023</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="populars_button_text">Популярные</string>
+    <string name="favourites_button_tex">Избранное</string>
+    <string name="set_to_fav">set to fav</string>
+    <string name="title_genre">Жанры:</string>
+    <string name="title_country">Страны:</string>
+    <string name="no_internet">Произошла ошибка при загрузке данных, проверьте подключение к сети</string>
+    <string name="repeat">Повторить</string>
+    <string name="large_request_limit">Превышен лимит запросов(или дневной, или общий)</string>
+    <string name="many_requests">Слишком много запросов. Лимит 5 запроса в секунду</string>
+    <string name="token_not_found">Пустой или неправильный токен</string>
+    <string name="not_found">Не найдено</string>
+</resources>

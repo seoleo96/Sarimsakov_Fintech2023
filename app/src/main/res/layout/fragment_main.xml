@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/dp_16"
+        android:paddingEnd="@dimen/dp_16"
+        android:paddingTop="@dimen/dp_8"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/dp_8"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_medium"
+            android:text="@string/populars_button_text"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_25" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:gravity="end"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/search_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_film" />
+
+    <LinearLayout
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:indeterminateTint="@color/indeterminateTint" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/no_internet_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp_40"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/no_internet" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_32"
+                android:fontFamily="@font/roboto_regular"
+                android:text="@string/no_internet"
+                android:textAlignment="center"
+                android:textColor="@color/fav_on"
+                android:textSize="@dimen/sp_14" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/retry"
+                style="@style/ButtonTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/repeat" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/empty_search_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/dp_40"
+        android:visibility="gone"
+        android:gravity="center">
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/ButtonTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_54"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:text="@string/not_found" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
