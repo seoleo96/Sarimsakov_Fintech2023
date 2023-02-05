@@ -54,7 +54,6 @@ class FavouritesFragment() : Fragment() {
                 text?.let {
                     viewModel.fetchFavFilms(it)
                 }
-
                 return true
             }
         })
