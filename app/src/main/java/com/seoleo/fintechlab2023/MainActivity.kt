@@ -36,6 +36,8 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.addOnBackStackChangedListener {
             binding.buttonContent.isGone = supportFragmentManager.backStackEntryCount == 1
         }
+
+
     }
 
     private fun listeners() {
