@@ -26,8 +26,6 @@ class MainActivity : AppCompatActivity() {
             showFragment(FragmentType.Populars)
         }
 
-        listeners()
-
         supportFragmentManager.setFragmentResultListener("hide", this) { _, result ->
             val hide = result.getBoolean("hide", false)
             binding.buttonContent.isGone = hide
@@ -36,6 +34,8 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.addOnBackStackChangedListener {
             binding.buttonContent.isGone = supportFragmentManager.backStackEntryCount == 1
         }
+
+        listeners()
     }
 
     private fun listeners() {

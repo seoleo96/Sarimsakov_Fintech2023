@@ -34,9 +34,7 @@ class App : Application() {
             retrofitInstance.service(retrofitInstance.instance())
         }
         singleOf(::CloudDataSourceImpl) bind CloudDataSource::class
-        single {
-            FilmsDatabase.getDatabase(androidContext()).filmDao()
-        }
+        single { FilmsDatabase.getDatabase(androidContext()).filmDao() }
         singleOf(::FilmRepositoryImpl) bind FilmRepository::class
         viewModelOf(::MainViewModel)
         viewModelOf(::FavouritesViewModel)
