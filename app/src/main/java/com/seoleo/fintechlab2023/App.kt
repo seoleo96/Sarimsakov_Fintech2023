@@ -29,15 +29,12 @@ class App : Application() {
     }
 
     private val appModule = module {
-
-        single<FilmService> {
+        single {
             val retrofitInstance = RetrofitInstance()
             retrofitInstance.service(retrofitInstance.instance())
         }
         singleOf(::CloudDataSourceImpl) bind CloudDataSource::class
-        single<FilmDao> {
-            FilmsDatabase.getDatabase(androidContext()).filmDao()
-        }
+        single { FilmsDatabase.getDatabase(androidContext()).filmDao() }
         singleOf(::FilmRepositoryImpl) bind FilmRepository::class
         viewModelOf(::MainViewModel)
         viewModelOf(::FavouritesViewModel)
